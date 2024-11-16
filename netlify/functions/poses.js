@@ -1,8 +1,8 @@
-const { json } = require("@netlify/functions");
-const yogaPoses = require("../../data/yogaPoses.json");
+const { formatJSONResponse } = require('@netlify/functions');
+const yogaPoses = require('../../data/yogaPoses.json');
 
 const handler = async (event) => {
-  return json(yogaPoses);
+  return formatJSONResponse(yogaPoses);
 };
 
 module.exports = { handler };
